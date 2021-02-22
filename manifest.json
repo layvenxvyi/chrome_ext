@@ -1,0 +1,25 @@
+{
+	"manifest_version":2,
+	"name":"test",
+	"version":"1.0",
+	"description":"inject_hook",
+	"permissions":["webRequest","webRequestBlocking","<all_urls>"],
+	"background":{
+		// "scripts":["background.js"],
+		// "persistent":true
+	},
+	"icons":{
+		"16":"img/icon.png"
+	},
+	//content-scripts可以向页面注入脚本或者CSS，可以实现广告屏蔽、页面CSS定制等等，在manifest.json里的配置的定义为：
+	"content_scripts":[
+		{
+			"matches":["https://rsb.pingan.com.cn/*","https://b.pingan.com.cn/*"],
+			"js":["script.js"],
+			"run_at":"document_start",
+			"all_frames":true
+		}],
+	// "web_accessible_resources":["js/inject.js","js/hook.js"]
+	"web_accessible_resources":["js/hook.js"]
+
+}
