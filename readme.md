@@ -14,8 +14,13 @@
 ![前端调试4](./前端调试4.png "前端调试4")
 
 ![前端调试5](./前端调试5.png "前端调试5")
+
 # 实现效果
 chrome_ext/js/hook.js#93-#109为hook住前端window.security.randomString代码，使返回固定值如16个1
+![加载chrome插件](./加载chrome插件.png "加载chrome插件")
+
+![hook返回16个1](./hook返回16个1.png "hook返回16个1")
+
 bp插件实现解密，使用通用解密插件填入aes相关信息
 ![bp解密插件](./bp解密插件.jpg "bp解密插件")
 
